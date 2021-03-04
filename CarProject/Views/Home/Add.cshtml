@@ -1,0 +1,25 @@
+﻿@model CarViewModel
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 jumbotron">
+            <h1>Add Car</h1>
+            <form action="/Home/Add" method="POST">
+                <input id="make" type="text" class="form-control mt-2" placeholder="Make" name="make" />
+                <input id="model" type="text" class="form-control mt-2" placeholder="Model" name="model" />
+                <input id="year" type="text" class="form-control mt-2" placeholder="Year" name="year" />
+                <input id="price" type="text" class="form-control mt-2" placeholder="Price" name="price" />
+
+                <select id="car-type" name="CarType" class="form-control mt-2">
+                    <option value="-1">>>Choose Car Type<<</option>
+                    <option value="0">Sedan</option>
+                    <option value="1">Supercar</option>
+                    <option value="2">SUV</option>
+                </select>
+                <input id="leather-seats" value="true" type="checkbox" name="LeatherSeats" />
+                Has Leather Seats
+                <button id="submit-button" disabled class="btn btn-primary btn-block mt-2">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
